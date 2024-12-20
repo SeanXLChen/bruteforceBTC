@@ -16,9 +16,34 @@ On **M1** CPU (10 cores) - **310 000 keys/sec** (**76 Gchecks/sec**).
 
 ## How to run it
 
-`python brute.py`  
-or
-execute `run.bat`
+### Setup
+1. Create a virtual environment:
+   ```bash
+   python -m venv venv
+   ```
+
+2. Activate the virtual environment:
+   ```bash 
+   source venv/bin/activate
+   ```
+
+3. Install required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+### Running
+You can run the script in one of two ways:
+
+1. Using Python directly:
+   ```bash
+   python brute.py
+   ```
+
+2. Or simply execute:
+   ```bash
+   run.bat
+   ```
 
 ## Requirements
 
