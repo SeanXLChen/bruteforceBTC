@@ -14,11 +14,11 @@ def getRawAddress(bitcoinAddress):
 
 # Create a set of hashed public keys decoded from provided list of bitcoin addresses
 def createHashedPubKeySetFromAddressList(filename):
-    addressList = []
+    address_set = set()
     with open(filename) as f:
         for line in f:
-            addressList.append(getRawAddress(line.strip('\n')))
-    return set(addressList)
+            address_set.add(getRawAddress(line.strip('\n')))
+    return address_set
 
 def searchInList(priv_key, hash160, rawAddressSet, compression, outputFile):
     if hash160 in rawAddressSet:
